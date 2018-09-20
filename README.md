@@ -1,26 +1,49 @@
-# Discord 1337 Bot 🤖
+#### GuideBotX is a fork of guidebot which I will keep up to date with both the upstream repo and any customisations I make to the boilerplate to make building comprehensive, dynamic bots simpler
+# Guide Bot
+An example of a Discord.js Bot Handler. Updated and Maintained by the Idiot's Guide Community.
 
-A simple Discord bot that replies "damn it" whenever anyone says "1337"
+Ages ago, Guide Bot was actually a little bot I had on the official discord.js server.
+It helped me link to the d.js bot making guide I was building, with links.
+This bot grew into something that I could show new coders and bot makers, but
+over time it grew into a full framework - one that is now under the hands of a 
+group of contributors, and no longer easily "understandable" by the majority
+of our newbies. So I've pulled the original Guide Bot out of the mothballs,
+gave it a fresh coat of paint and grease, and here it is back in its full glory!
 
-![](https://cdn.glitch.com/f1b80a31-0733-40fb-a0dd-44c8c80c155d%2Fscreenshot.png?1506425519756)
+This command handler is 98% compatible with [my selfbot](https://github.com/eslachance/evie.selfbot) 
+and 99% compatible with commands from [York's Tutorial Bot](https://github.com/AnIdiotsGuide/Tutorial-Bot/tree/Episode-10-Part-1).
 
-## Prerequisites
+## Requirements
 
-You'll need:
- - A [Discord account](https://discordapp.com/register)
- - Permission to add accounts to a server, or your own server
+- `git` command line ([Windows](https://git-scm.com/download/win)|[Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)|[MacOS](https://git-scm.com/download/mac)) installed
+- `node` [Version 8.0.0 or higher](https://nodejs.org)
+- The node-gyp build tools. This is a pre-requisite for Enmap, but also for a **lot** of other modules. See [The Enmap Guide](https://enmap.evie.codes/install#pre-requisites) for details and requirements for your OS. Just follow what's in the tabbed block only, then come back here!
 
-## Steps to set up:
+You also need your bot's token. This is obtained by creating an application in
+the Developer section of discordapp.com. Check the [first section of this page](https://anidiots.guide/getting-started/the-long-version.html) 
+for more info.
 
-1. Create an App here: [https://discordapp.com/developers/applications/me](https://discordapp.com/developers/applications/me)
-2. Create an App Bot User for your App by clicking "Create a Bot User"
-3. Add the App Bot User to your Discord server using this link: `https://discordapp.com/oauth2/authorize?&client_id=<CLIENT ID>&scope=bot&permissions=0` replacing `<CLIENT_ID>` with the Client ID found on the page of your App
-4. Set the `DISCORD_BOT_ID` value in `.env` using the Bot User token ("click to reveal" in the App page under the bot username)
+## Downloading
 
-## The code
+In a command prompt in your projects folder (wherever that may be) run the following:
 
-Check out `server.js` to see how it works ✨
+`git clone https://github.com/An-Idiots-Guide/guidebot.git`
 
-We're using the [Eris](https://npm.im/eris) library to interact with the Discord API.
+Once finished: 
 
-If it's working you should see "Ready!" in the logs.
+- In the folder from where you ran the git command, run `cd guidebot` and then run `npm install`
+- **If you get any error about python or msibuild.exe or binding, read the requirements section again!**
+- Rename or copy `config.js.example` to `config.js`
+- Edit `config.js` and fill in all the relevant details as indicated in the file's comments.
+
+## Starting the bot
+
+To start the bot, in the command prompt, run the following command:
+`node index.js`
+
+## Inviting to a guild
+
+To add the bot to your guild, you have to get an oauth link for it. 
+
+You can use this site to help you generate a full OAuth Link, which includes a calculator for the permissions:
+[https://finitereality.github.io/permissions-calculator/?v=0](https://finitereality.github.io/permissions-calculator/?v=0)
